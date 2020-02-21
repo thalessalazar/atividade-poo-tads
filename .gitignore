@@ -73,6 +73,16 @@ nbactions.xml
 nb-configuration.xml
 
 ##############################
+## vscode
+##############################
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+##############################
 ## OS X
 ##############################
 .DS_Store
