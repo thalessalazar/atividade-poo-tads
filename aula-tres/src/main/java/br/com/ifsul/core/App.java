@@ -3,6 +3,7 @@ package br.com.ifsul.core;
 import java.math.BigDecimal;
 
 import br.com.ifsul.core.model.Conta;
+import br.com.ifsul.core.model.Pessoa;
 /**
  * Hello world!
  *
@@ -11,11 +12,15 @@ public class App
 {
     public static void main( String[] args ) {
         
-        Conta minhaConta = new Conta();
-        minhaConta.correntista = "Eduardo";
-        minhaConta.agencia = 171;
-        minhaConta.numeroConta = 2;
-        minhaConta.saldo = BigDecimal.TEN;
+        
+        Pessoa pessoa = new Pessoa();
+        Conta minhaConta = new Conta(pessoa);
+        minhaConta.setCorrentista("Eduardo");
+        minhaConta.setAgencia(171);
+        minhaConta.setNumeroConta(2);
+        minhaConta.setSaldo(BigDecimal.TEN);
+        minhaConta.setPessoa(pessoa);
+        
              
         
         Conta minhaContaDois = new Conta("Rodrigo", 1, 171, BigDecimal.ONE);

@@ -10,13 +10,15 @@ public class Conta {
     //Atributos da nossa classe conta
     //Um atributo consiste em:
     //<tipo> nomeDoMeuAtributo;
-    public String correntista;
-    public int numeroConta;
-    public int agencia;
-    public BigDecimal saldo;
+    private String correntista;
+    private int numeroConta;
+    private int agencia;
+    private BigDecimal saldo;
+    private Pessoa pessoa;
 
     //Abaixo temos o nosso construtor
-    public Conta() {
+    public Conta(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
     //Abaixo temos o nosso construtor sobrecarregado
@@ -30,6 +32,46 @@ public class Conta {
         this.numeroConta = numeroConta;
         this.agencia = agencia;
         this.saldo = saldo;
+    }
+
+    public void setCorrentista(String correntista) {
+        this.correntista = correntista;
+    }
+
+    public String getCorrentista() {
+        return this.correntista;
+    }
+
+    public void setNumeroConta(int numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public int getNumeroConta() {
+        return this.numeroConta;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getAgencia() {
+        return this.agencia;
+    }
+
+    public void setSaldo(BigDecimal saldo) {
+        this.saldo = saldo;
+    }
+
+    public BigDecimal getSaldo() {
+        return this.saldo;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Pessoa getPessoa() {
+        return this.pessoa;
     }
 
     //Abaixo temos nosso metodo, que alteram o comportamento
