@@ -12,21 +12,18 @@ public class App
 {
     public static void main( String[] args ) {
         
+        //http:
         
-        Pessoa pessoa = new Pessoa();
-        Conta minhaConta = new Conta(pessoa);
-        minhaConta.setCorrentista("Eduardo");
-        minhaConta.setAgencia(171);
-        minhaConta.setNumeroConta(2);
-        minhaConta.setSaldo(BigDecimal.TEN);
-        minhaConta.setPessoa(pessoa);
+        //Pessoa pessoa = new Pessoa();
+        Conta minhaConta = Conta.createConta("Rodrigo", 1, 171, BigDecimal.ONE);
+
         
              
         
-        Conta minhaContaDois = new Conta("Rodrigo", 1, 171, BigDecimal.ONE);
-        minhaContaDois.depositar(BigDecimal.valueOf(1000L));
+        //Conta minhaContaDois = new Conta("Rodrigo", 1, 171, BigDecimal.ONE);
+        //minhaContaDois.depositar(BigDecimal.valueOf(1000L));
 
-        System.out.println(minhaContaDois.sacar(BigDecimal.TEN));
+        //System.out.println(minhaContaDois.sacar(BigDecimal.TEN));
 
         
        // System.out.println("Correntista da conta um: " + minhaConta.correntista);
